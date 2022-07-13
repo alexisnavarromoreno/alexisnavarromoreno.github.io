@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    </link>
+    <title>My Portfolio</title>
+</head>
+
+<body data-spy="scroll" data-target="#navbarResponsive">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <div id="home">
+        <!------  NAVIGATION BAR START ------>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top text-white">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service">Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!------  NAVIGATION BAR END ------>
+        <!------  BACKGROUND START ------>
+        <div class="background">
+            <img src="img/back1.jpg" class="img-fluid">
+        </div>
+        <div class="heading-content text-center">
+            <h5>Hello, I'm</h5>
+            <h1>Alexis Navarro</h1>
+            <p>AND THIS IS MY WORLD</p>
+        </div>
+        <!------  BACKGROUND END ------>
+    </div>
+
+    <!------  ABOUT START ------>
+    <div id="about" class="offset container mt-3 mb-5">
+        <div class="post-heading text-center">
+            <h1>About Me</h1>
+            <hr class="w-50 mx-auto pb-5">
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <img src="img/back1.jpg" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <h3>Wanna Know Me?</h3>
+                <hr>
+                <p id="aboutP">
+                    I am a software developer from Spain in constant learning
+                    for my professional growth, good teamwork skills and work
+                    under pressure, in the next
+                    section I will show you some of my projects.</p>
+                <button class="btn w-50">
+                    <a href="#">Know More</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!------  ABOUT END ------>
+
+    <!------  SERVICE START ------>
+    <div id="service" class="offset container mt-3 pb-5">
+        <div class="post-heading text-center">
+            <h1>My Proyects</h1>
+            <hr class="w-50 mx-auto pb-5">
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 pb-5">
+                <div class="card">
+                    <img class="card-img-top" src="img/qtProyect.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Qt custom component</h5>
+                        <p class="card-text">Custom component for the Qt framework with animation when clearing inputs
+                            in forms.</p>
+                        <a href="https://github.com/alexisnavarromoreno/ComponentePersonalizadoQt"
+                            class="btn btn-dark">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 pb-5">
+                <div class="card">
+                    <img class="card-img-top" src="img/logo.PNG" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Newest</h5>
+                        <p class="card-text">
+                            Web scrapping app to show new movies, series, books and videogames, with the possibility of
+                            adding and deleting them in a SqLite database.</p>
+                        <a href="https://github.com/alexisnavarromoreno/Newest_APP" class="btn btn-dark">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!------  SERVICE END ------>
+
+
+    <!------  CONTACT START ------>
+    <div id="contact" class="offset w-50 mx-auto mt-5 pb-5">
+        <div class="post-heading text-center">
+            <h1>Contact</h1>
+            <hr class="w-50 mx-auto pb-5">
+        </div>
+        <form action="enviarFormulario.php" method="post" id="formContact" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" name="fullName" class="form-control" id="fullName" placeholder="Enter Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea class="form-control" name="message" id="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Sent</button>
+        </form>
+
+    </div>
+    <!------  CONTACT END ------>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h3>Alexis Navarro</h3>
+            <p>Contact me on GitHub or Linkedin</p>
+            <ul class="socials">
+                <li><a href="https://github.com/alexisnavarromoreno"><i class="fa fa-github fa-3x"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square fa-3x"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2022 designed by <span>Alexis Navarro</span></p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

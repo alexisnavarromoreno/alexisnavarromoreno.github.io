@@ -1,10 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 body{
     margin: 0;
     padding:0;
     box-sizing: border-box;
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.03em;
+    line-height:1.6;
+}
+
+.contact{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding:20px 100px;
+    margin-top: 300px;
+}
+
+.contact::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./img/original.jpeg") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.contact-box{
+    max-width:850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+    height: 100%;
+    background: url("./img/original.jpeg") no-repeat center;
+    background-size: cover;
+}
+
+.right{
+    padding:25px 40px;
+}
+
+.right h2{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.right h2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+.right .field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230,230,230,0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+    outline: none;
+    border:2px solid rgba(0,0,0,0);
+}
+
+.right .field:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.right .field:focus{
+    background-color: #fff;
+    border: 2px solid rgba(30,85,250,0.47);
+}
+
+.right .area{
+    min-height: 150px;
+}
+
+.right .btn-submit{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #2ecc71;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: .3s;
+    color:#fff;
+}
+
+.right .btn-submit:hover{
+    background-color: #27ae60;
 }
 
 .navbar{
@@ -30,7 +136,7 @@ body{
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover{
-    color: #1ebba3 ;
+    color: aqua ;
 }
 
 .heading-content{
@@ -44,7 +150,7 @@ body{
     font-size: 4em;
     font-weight: 300;
     color: #fff;
-    font-family: monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 .heading-content h1{
@@ -82,7 +188,7 @@ body{
 }
 
 #about .btn:hover{
-    border: 2px solid #1ebb;
+    border: 2px solid aqua;
     cursor: pointer;
 }
 /*--------------------ABOUT END--------------------------*/
@@ -140,7 +246,7 @@ body{
 }
 
 .socials a:hover i{
-    color:#1ebba3;
+    color:aqua;
 }
 
 .footer-bottom{
@@ -163,4 +269,61 @@ body{
 }
 
 
-/*--------------------SERVICE END--------------------------*/
+
+
+.containerCard{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.containerCard .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.containerCard .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.containerCard .card img{
+    width:330px;
+    height:220px;
+}
+
+.containerCard .card h4{
+    font-weight: 600;
+
+}
+
+.containerCard .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.containerCard .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+@media screen and (max-width:880px){
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+    .left{
+        height: 200px;
+    }
+}

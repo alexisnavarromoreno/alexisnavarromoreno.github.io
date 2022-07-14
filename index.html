@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="estilos.css">
     </link>
     <title>My Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('ifjap1GSM_0Q6yKe4');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_5cjvu8u', 'template_zjac4tg', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
@@ -44,7 +64,7 @@
         <!------  NAVIGATION BAR END ------>
         <!------  BACKGROUND START ------>
         <div class="background">
-            <img src="img/back1.jpg" class="img-fluid">
+            <img src="img/programmingBack.jpg" class="img-fluid">
         </div>
         <div class="heading-content text-center">
             <h5>Hello, I'm</h5>
@@ -72,9 +92,10 @@
                     for my professional growth, good teamwork skills and work
                     under pressure, in the next
                     section I will show you some of my projects.</p>
-                <button class="btn w-50">
-                    <a href="#">Know More</a>
-                </button>
+                <a role="button" target="_blank" href="CV_Alexis.pdf" download class="btn btn-dark">
+                   Show CV
+                   <i class="fa fa-download"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -89,31 +110,24 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 pb-5">
+            <div class="containerCard">
                 <div class="card">
-                    <img class="card-img-top" src="img/qtProyect.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Qt custom component</h5>
-                        <p class="card-text">Custom component for the Qt framework with animation when clearing inputs
-                            in forms.</p>
-                        <a href="https://github.com/alexisnavarromoreno/ComponentePersonalizadoQt"
-                            class="btn btn-dark">Details</a>
-                    </div>
+                    <img src="img/qtProyect.png" alt="Card image cap">
+                    <h4>Qt custom component</h4>
+                    <p>Custom component for the Qt framework with animation when clearing inputs
+                        in forms.</p>
+                    <a href="https://github.com/alexisnavarromoreno/ComponentePersonalizadoQt">Details</a>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 pb-5">
                 <div class="card">
-                    <img class="card-img-top" src="img/logo.PNG" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Newest</h5>
-                        <p class="card-text">
-                            Web scrapping app to show new movies, series, books and videogames, with the possibility of
-                            adding and deleting them in a SqLite database.</p>
-                        <a href="https://github.com/alexisnavarromoreno/Newest_APP" class="btn btn-dark">Details</a>
-                    </div>
+                    <img src="img/logo.png" alt="Card image cap">
+                    <h4>Newest</h4>
+                    <p>Web scrapping app to show newest, with the possibility of
+                        adding and deleting them.</p>
+                    <a href="https://github.com/alexisnavarromoreno/Newest_APP">Details</a>
                 </div>
             </div>
         </div>
+    </div>
 
 
     </div>
@@ -121,28 +135,22 @@
 
 
     <!------  CONTACT START ------>
-    <div id="contact" class="offset w-50 mx-auto mt-5 pb-5">
-        <div class="post-heading text-center">
-            <h1>Contact</h1>
-            <hr class="w-50 mx-auto pb-5">
-        </div>
-        <form action="enviarFormulario.php" method="post" id="formContact" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="fullName">Full Name:</label>
-                <input type="text" name="fullName" class="form-control" id="fullName" placeholder="Enter Full Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email address:</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea class="form-control" name="message" id="message" placeholder="Enter your message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-dark">Sent</button>
+<div id="contact" class="contact offset container mt-3 pb-5">
+<div class="contact-box">
+    <div class="left"></div>
+    <div class="right">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+        <input name="name" type="text" class="field" placeholder="Your Name">
+        <input name="email" type="email" class="field" placeholder="Your Email">
+        <input name="phone" type="text" class="field" placeholder="Your Phone">
+        <textarea name="message" class="field area" placeholder="Message"></textarea>
+        <input type="submit" value="Send" class="btn-submit"></input>
         </form>
-
     </div>
+</div>
+
+</div>
     <!------  CONTACT END ------>
 
     <footer id="footer">

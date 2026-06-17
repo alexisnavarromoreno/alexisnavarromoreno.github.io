@@ -1,203 +1,296 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!-- Metadatos -->
-        <meta charset="UTF-8">
-        <meta name="author" content="Alexis Navarro">
-        <meta name="description" content="Portafolio de desarrollo de aplicaciones multiplataforma/web de Alexis Navarro">
-        <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python, Kotlin, Angular, React">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Titulo -->
-        <title>Alexis Navarro | Desarrollo de Aplicaciones Multiplataforma/Web</title>
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="imagenes/icono.png"></link>
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- Iconos de Bootstrap -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <!-- CSS -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik+Dirt&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Barra de navegacion -->
-        <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alexis Navarro">
+    <meta name="description" content="Portafolio de Alexis Navarro - Analista Programador Senior especializado en Java, Spring Boot, Angular y React.">
+    <meta name="keywords" content="Java, Spring Boot, Angular, React, TypeScript, JavaScript, Oracle SQL, PL/SQL, desarrollador web, analista programador">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alexis Navarro | Analista Programador Senior</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/icono.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbar-toggler">
-                <a class="navbar-brand" href="#">
-                    <img src="imagenes/icono.png" width="50" alt="Logo del Portafolio">
-                </a>
-                <ul class="navbar-nav d-flex justify-content-center align-items-center">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre mí</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#proyectos">Proyectos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                  </li>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-md-center">
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
-              </div>
             </div>
-        </nav>
-        <!-- Seccion Hero -->
-        <section class="hero align-items-stretch">
-            <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-                <img class="hero-imagen-desarrollador" src="imagenes/alexis.jpg" alt="Foto de Alexis Navarro">
-                <h1>Hola, soy Alexis Navarro</h1>
-                <h2>Desarrollo aplicaciones multiplataforma y sitios web.</h2>
-                <a role="button" target="_blank" href="CV_Alexis.pdf" download class="btn btn-dark">
-                    Download CV
-                    <i class="bi bi-download"></i>
-                </a>
-            </div>
-            <div class="hero-inferior">
-                <img class="hero-inferior-imagen img-fluid" src="imagenes/hero-inferior.svg" alt="Monitor y lenguajes de programación.">
-            </div>
-        </section>
+        </div>
+    </nav>
 
-        <!-- Sobre mi -->
-        <section id="sobre-mi" class="sobre-mi seccion-oscura">
-            <div class="contenedor">
-                <h2 class="seccion-titulo">Conoce a Alexis Navarro</h2>
-                <p class="seccion-texto">Soy desarrollador multiplataforma y creador de sitios web de España en constante aprendizaje por mi crecimiento personal y profesional, con buenas habilidades de trabajo en equipo y trabajo bajo presión.</p>
+    <!-- Hero -->
+    <section class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <p class="hero-eyebrow">Hola, soy</p>
+                    <h1 class="hero-name">Alexis Navarro</h1>
+                    <h2 class="hero-title">Analista Programador <span class="accent">Senior</span></h2>
+                    <p class="hero-subtitle">Desarrollo aplicaciones web robustas con Java, Spring Boot, Angular y React. Actualmente en <span class="accent">ICA TD</span>.</p>
+                    <div class="hero-actions">
+                        <a href="CV_Alexis.pdf" download class="btn-primary-custom">
+                            Descargar CV <i class="bi bi-download ms-1"></i>
+                        </a>
+                        <a href="#contacto" class="btn-secondary-custom">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+                    <div class="hero-image-wrapper">
+                        <img src="imagenes/alexis.jpg" alt="Alexis Navarro" class="hero-image">
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </section>
 
-        <!-- Experiencia -->
-        <section class="experiencia seccion-clara">
-            <div class="container text-center">
-                <div class="row">
-                    <!-- Experiencia profesional -->
-                    <div class="columna col-6 col-md-6">
-                        <i class="bi bi-laptop"></i>
-                        <p class="experiencia-titulo">Desarrollo web</p>
-                        <p>Trabajando actualmente y desde 2022 en la empresa Alten como desarrollador de páginas web en 2 proyectos públicos: CIEMAT y colaborando con la empresa TRAGGSA.</p>
-                        <div class="badges-contenedor">
-                            <span class="badge text-bg-primary">HTML</span>
-                            <span class="badge text-bg-primary">CSS</span>
-                            <span class="badge text-bg-primary">JavaScript</span>
-                            <span class="badge text-bg-primary">Java</span>
-                            <span class="badge text-bg-primary">Ángular</span>
-                            <span class="badge text-bg-primary">React</span>
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section-about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center" data-aos="fade-up">
+                    <p class="section-label">// sobre mí</p>
+                    <h2 class="section-heading">¿Quién soy?</h2>
+                    <p class="about-text">Desarrollador de software con más de 4 años de experiencia construyendo aplicaciones web de nivel empresarial. Especializado en el stack Java/Spring Boot en backend y Angular/React en frontend, con sólida experiencia en bases de datos Oracle SQL y PL/SQL. Me caracterizo por el trabajo en equipo, la adaptación rápida a nuevos entornos y el aprendizaje continuo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section-skills">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <p class="section-label">// tecnologías</p>
+                <h2 class="section-heading">Stack técnico</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card">
+                        <div class="skill-card-icon"><i class="bi bi-code-slash"></i></div>
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                            <span>Angular</span>
+                            <span>React</span>
                         </div>
                     </div>
-                    <!-- Estudios -->
-                    <div class="columna col-6 col-md-6">
-                        <i class="bi bi-book"></i>
-                        <p class="experiencia-titulo">Estudios</p>           
-                        <p>Prueba de Acceso a Universidad (2019 - 2020).</p>
-                        <p>Grado Superior en Desarrrollo de Aplicaciones Multiplataforma (2020 - 2022).</p>                
-                        <div class="badges-contenedor">
-                            <span class="badge text-bg-primary">HTML</span>
-                            <span class="badge text-bg-primary">CSS</span>
-                            <span class="badge text-bg-primary">Java</span>
-                            <span class="badge text-bg-primary">Kotlin</span>
-                            <span class="badge text-bg-primary">Python</span>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card">
+                        <div class="skill-card-icon"><i class="bi bi-server"></i></div>
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>JSP</span>
+                            <span>Hibernate / JPA</span>
+                            <span>Maven / Gradle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card">
+                        <div class="skill-card-icon"><i class="bi bi-database"></i></div>
+                        <h3>Datos</h3>
+                        <div class="skill-tags">
+                            <span>Oracle SQL</span>
+                            <span>PL/SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card">
+                        <div class="skill-card-icon"><i class="bi bi-tools"></i></div>
+                        <h3>Otros</h3>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>Kotlin</span>
+                            <span>Git / GitHub</span>
+                            <span>Docker</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Proyectos -->
-        <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
-            <h2 class="seccion-titulo texto-negro">Mis proyectos</h2>
-            <h3 class="seccion-descripcion">Estos son algunos de mis proyectos...</h3>
-            <!-- Galeria de proyectos -->
-            <div class="container text-center proyectos-contenedor">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="proyecto">
-                            <img src="imagenes/proyecto1.jpg" alt="Proyecto 1">
-                            <div class="overlay">
-                                <p>Componente personalizado Qt</p>
-                                <div class="iconos-contenedor d-flex">
-                                    <a href="https://github.com/alexisnavarromoreno/ComponentePersonalizadoQt" target="_blank" rel="noopener noreferrer">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="proyecto">
-                                <img src="imagenes/proyecto2.jpg" alt="Proyecto 2">
-                                <div class="overlay">
-                                    <p>Newest</p>
-                                    <div class="iconos-contenedor d-flex">
-                                        <a href="https://github.com/alexisnavarromoreno/Newest_APP" target="_blank" rel="noopener noreferrer">
-                                            <i class="bi bi-github"></i>
-                                        </a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- Experiencia -->
+    <section id="experiencia" class="section-experience">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <p class="section-label">// trayectoria</p>
+                <h2 class="section-heading">Experiencia</h2>
+            </div>
+            <div class="timeline">
+                <!-- ICA TD -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 — Presente</span>
+                        <h3 class="timeline-role">Analista Programador Senior</h3>
+                        <p class="timeline-company"><i class="bi bi-building me-1"></i>ICA TD</p>
+                        <p class="timeline-desc">Análisis, diseño y desarrollo de soluciones de software empresariales. Responsable de la toma de decisiones técnicas y la entrega de componentes de alta complejidad.</p>
+                    </div>
+                </div>
+                <!-- Alten -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="150">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 — 2026</span>
+                        <h3 class="timeline-role">Desarrollador Web</h3>
+                        <p class="timeline-company"><i class="bi bi-building me-1"></i>Alten</p>
+                        <p class="timeline-desc">Desarrollo web en 2 proyectos públicos de referencia: CIEMAT y TRAGGSA. Integración de sistemas, mantenimiento de aplicaciones empresariales y trabajo directo en cliente.</p>
+                    </div>
+                </div>
+                <!-- Formación -->
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-dot timeline-dot-edu"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 — 2022</span>
+                        <h3 class="timeline-role">Grado Superior — DAM</h3>
+                        <p class="timeline-company"><i class="bi bi-mortarboard me-1"></i>Desarrollo de Aplicaciones Multiplataforma</p>
+                        <p class="timeline-desc">Formación en desarrollo de aplicaciones móviles y de escritorio, bases de datos y programación orientada a objetos con Java y Kotlin.</p>
                     </div>
                 </div>
             </div>
-            <a href="https://github.com/alexisnavarromoreno?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <button type="button" class="btn btn-info">
-                    Ver más proyectos
-                    <i class="bi bi-arrow-right-circle-fill"></i>
-                </button>
-            </a>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contacto -->
-        <section class="contacto seccion-oscura">
-            <div class="container">
-                <div id="contacto" class="container text-center rectangulo d-flex justify-content-evenly">
-                    <div class="row">
-                        <div class="col-12 col-md-4 seccion-titulo">
-                            ¡Hablemos!
+    <!-- Proyectos -->
+    <section id="proyectos" class="section-projects">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <p class="section-label">// portafolio</p>
+                <h2 class="section-heading">Proyectos</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="imagenes/proyecto1.jpg" alt="Componente personalizado Qt" class="project-img">
                         </div>
-                        <div class="col-12 col-md-4 descripcion">
-                            Contactáme para iniciar tu proyecto de desarrollo de aplicaciones o desarrollo web y haré que tu visión se vuelva realidad.
+                        <div class="project-info">
+                            <h3>Componente personalizado Qt</h3>
+                            <p>Desarrollo de un componente de interfaz gráfica personalizado con el framework Qt.</p>
+                            <a href="https://github.com/alexisnavarromoreno/ComponentePersonalizadoQt" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="bi bi-github me-1"></i>Ver en GitHub
+                            </a>
                         </div>
-                        <div class="col-12 col-md-4">
-                            <a href="mailto:alexisnnm.1990@gmail.com">
-                                <button type="button">
-                                    Contacto
-                                    <i class="bi bi-envelope-check-fill"></i>
-                                </button>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="imagenes/proyecto2.jpg" alt="Newest" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <h3>Newest</h3>
+                            <p>Aplicación de noticias desarrollada para plataformas móviles.</p>
+                            <a href="https://github.com/alexisnavarromoreno/Newest_APP" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="bi bi-github me-1"></i>Ver en GitHub
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Pie de pagina (footer) -->
-        <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
-            <img class="footer-logo" src="imagenes/icono-blanco.svg" alt="Logo del portafolio">
-            <p class="footer-texto text-center">Aprendo y creo todos los días.<br>Creemos un proyecto juntos.</p>
-            <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-            <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BGSA7wsHxSuKXGBQJq%2B0wdQ%3D%3D" target="_blank" rel="noopener noreferrer" >
-                <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="https://github.com/alexisnavarromoreno" target="_blank" rel="noopener noreferrer" >
-                <i class="bi bi-github"></i>
-            </a>
-            <a href="mailto:alexisnm1990@gmail.com" target="_blank" rel="noopener noreferrer" >
-                <i class="bi bi-envelope"></i>
-            </a>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="https://github.com/alexisnavarromoreno?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn-secondary-custom">
+                    Ver todos los proyectos <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
         </div>
-        <div class="derechos-de-autor">Creado por Alexis Navarro (2024) &#169;</div>
-        </footer>
+    </section>
 
+    <!-- Contacto -->
+    <section id="contacto" class="section-contact">
+        <div class="container">
+            <div class="contact-box" data-aos="fade-up">
+                <p class="section-label text-center">// contacto</p>
+                <h2 class="section-heading text-center">¿Hablamos?</h2>
+                <p class="contact-text text-center">Abierto a nuevas oportunidades, colaboraciones o simplemente a una buena charla sobre tecnología.</p>
+                <div class="text-center mt-4">
+                    <a href="mailto:alexisnm.1990@gmail.com" class="btn-primary-custom">
+                        Enviar mensaje <i class="bi bi-envelope ms-1"></i>
+                    </a>
+                </div>
+                <div class="social-links mt-5 d-flex justify-content-center gap-3">
+                    <a href="https://www.linkedin.com/in/alexisnavarromoreno" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/alexisnavarromoreno" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="mailto:alexisnm.1990@gmail.com" aria-label="Email">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="footer-text">Desarrollado por <span class="accent">Alexis Navarro</span> &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true, offset: 80 });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(s => navObserver.observe(s));
+    </script>
+</body>
 </html>
